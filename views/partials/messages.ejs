@@ -1,0 +1,19 @@
+<% if(typeof errors  != 'undefined') { %>
+ <% errors.forEach(function(error) { %>
+    <p style="border: indigo 1px solid; width: 33%; background-color: red;font-family: cursive;border-radius: 10px; color: black; padding: .25rem 1.5rem;"><%= error.msg %></p>
+<%  }) %>
+<% } %>
+
+<!-- //custome flash messages -->
+
+<% if(success_msg != '') { %>
+  <p style="border: indigo 1px solid; width: 33%; background-color: limegreen;font-family: cursive;border-radius: 10px; color: black; padding: .25rem 1.5rem;"><%= success_msg %></p>
+<% } %>
+
+<% if(error_msg != '') { %>
+  <p style="border: indigo 1px solid; width: 33%; background-color: red;font-family: cursive;border-radius: 10px; color: black; padding: .25rem 1.5rem;"><%= error_msg %></p>
+<% } %>
+
+<% if(error != '') { %>
+  <p style="border: indigo 1px solid; width: 33%; background-color: red;font-family: cursive;border-radius: 10px; color: black; padding: .25rem 1.5rem;"><%= error %></p>
+<% } %>

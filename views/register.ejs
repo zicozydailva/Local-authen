@@ -1,0 +1,28 @@
+<%-include(`partials/header`) %>
+
+<h3>Create a new account</h3>
+<%-include(`partials/messages`) %>
+
+<div class="container-spec"></div>
+<form action="/register" method="post">
+  <div class="item">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Enter your name" value="<%= typeof name != 'undefined' ? name : '' %>">
+  </div>
+  <div class="item">
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Enter a valid Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+  </div>
+  <div class="item">
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Enter your secret password" value="<%= typeof password != 'undefined' ? password : '' %>">
+  </div>
+  <div class="item">
+    <label for="password2">Confirm Password</label>
+    <input type="password" name="password2" placeholder="Enter your secret password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+  </div>
+  <button type="submit">Register</button>
+  <p>Already have an account? <a class="underlineA" href="/login">Login</a></p>
+</form>
+</div>
+<%-include(`partials/footer`) %>

@@ -1,0 +1,19 @@
+<%-include(`partials/header`) %>
+
+<h3>LogIn</h3>
+<%-include(`partials/messages`) %>
+<div class="container-spec">
+<form action="/login" method="post">
+  <div class="item">
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Enter a valid Email">
+  </div>
+  <div class="item">
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Enter your secret password">
+  </div>
+  <button type="submit">Login</button>
+  <p>Don't have an account? <a class="underlineA" href="/register">Register</a></p>
+</form>
+</div>
+<%-include(`partials/footer`) %>
